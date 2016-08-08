@@ -1,23 +1,32 @@
 # DEVELOP
 
-## init
+## package.json
 
-```
-$ npm init
-```
-
-## tools
-
-```
-npm install --save commander
-npm install --save mkdirp
-npm install --save sorted-object
+```shell
+npm init
 ```
 
 ## koa2
 
 ```
 npm install --save koa@next
+npm install --save koa-router@next
+npm install --save koa-bodyparser@next
+npm install --save koa-favicon@next
+npm install --save koa-logger@next
+npm install --save koa-static@next
+```
+
+## art-template
+
+```
+npm install --save art-template
+```
+
+## MongoDB
+
+```
+npm install --save mongoose
 ```
 
 ## babel
@@ -35,6 +44,7 @@ npm install --save-dev babel-polyfill
 ```
 npm install --save-dev eslint
 npm install --save-dev babel-eslint
+npm install --save-dev eslint-plugin-react
 ```
 
 ## node.js 支持 async
@@ -59,7 +69,37 @@ npm install --save-dev babel-plugin-transform-async-to-module-method
 ## gulp
 
 ```
-npm install --save-dev gulp gulp-babel gulp-changed gulp-sourcemaps gulp-rename gulp-plumber run-sequence
+npm install --save-dev gulp gulp-babel gulp-changed gulp-sourcemaps gulp-uglify gulp-clean-css gulp-sass gulp-rename gulp-imagemin imagemin-pngquant gulp-livereload run-sequence
+
+```
+
+## dev
+
+```shell
+npm install -g nodemon
+```
+
+package.json
+
+```
+"scripts": {
+    "develop": "nodemon lib/app.js",
+}
+```
+
+## release
+
+```
+npm install -g pm2
+```
+
+package.json
+
+```
+"scripts": {
+    "release": "pm2 lib/app.js",
+}
+```
 
 ## WebStorm
 

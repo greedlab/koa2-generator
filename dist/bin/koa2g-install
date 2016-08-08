@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+'use strict';
+
+require('babel-polyfill');
+require('../libs/koa2g-install.js');
