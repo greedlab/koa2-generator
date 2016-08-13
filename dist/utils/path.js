@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.readdir = exports.mkdir = exports.existedFile = exports.existedDirectory = exports.emptyDirectory = undefined;
+exports.mkdir = exports.existedFile = exports.existedDirectory = exports.emptyDirectory = undefined;
 
 var _bluebird = require('bluebird');
 
@@ -155,43 +155,6 @@ var mkdir = exports.mkdir = function () {
 
     return function mkdir(_x4) {
         return _ref4.apply(this, arguments);
-    };
-}();
-
-/**
- * read all files in directory 'path'
- *
- * @param path
- * @returns {Promise}
- */
-
-
-var readdir = exports.readdir = function () {
-    var _ref5 = (0, _bluebird.coroutine)(regeneratorRuntime.mark(function _callee5(path) {
-        return regeneratorRuntime.wrap(function _callee5$(_context5) {
-            while (1) {
-                switch (_context5.prev = _context5.next) {
-                    case 0:
-                        return _context5.abrupt('return', new Promise(function (resolve, reject) {
-                            fs.readdir(path, function (err, files) {
-                                if (err) {
-                                    reject(err);
-                                } else {
-                                    resolve(files);
-                                }
-                            });
-                        }));
-
-                    case 1:
-                    case 'end':
-                        return _context5.stop();
-                }
-            }
-        }, _callee5, this);
-    }));
-
-    return function readdir(_x5) {
-        return _ref5.apply(this, arguments);
     };
 }();
 

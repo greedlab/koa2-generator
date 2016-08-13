@@ -7,7 +7,6 @@
 
     "ecmaFeatures": {
         "modules": true,
-        "jsx": true,
         "flow": true
     },
 

@@ -84,20 +84,3 @@ export async function mkdir(path) {
     });
 }
 
-/**
- * read all files in directory 'path'
- *
- * @param path
- * @returns {Promise}
- */
-export async function readdir(path) {
-    return new Promise(function (resolve, reject) {
-        fs.readdir(path, function (err, files) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(files);
-            }
-        });
-    });
-}

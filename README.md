@@ -1,11 +1,28 @@
-# koa2-generator (developing...)
+# node-front-template
 
-front and back end generator for koa2
+template for front end based on node.js
 
 English | [中文](README-CN.md)
 
-## Usage
+## clone
 
-## Thanks
+```
+$ git clone https://github.com/greedlab/node-front-template.git
+```
 
-[koa-generator](https://github.com/17koa/koa-generator)
+## develop env
+
+```
+$ npm install
+$ gulp build
+$ gulp watch
+$ npm run develop
+```
+
+## production env
+
+```
+$ npm install
+$ gulp release
+$ npm run release
+```

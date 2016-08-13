@@ -4,7 +4,7 @@
   "description": "full-stack generator for koa2",
   "main": "index.js",
   "bin": {
-    "koa2g": "./bin/koa2g"
+    "koa2g": "./dist/bin/koa2g"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,6 +29,7 @@
   "dependencies": {
     "bluebird": "^3.4.1",
     "commander": "^2.9.0",
+    "debug": "^2.2.0",
     "koa": "^2.0.0-alpha.4",
     "mkdirp": "^0.5.1",
     "sorted-object": "^2.0.0"

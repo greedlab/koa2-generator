@@ -1,8 +1,8 @@
 
-var program = require('commander');
-var pkg = require('../../package.json');
+import program from 'commander';
+import pkg from '../../package.json';
 
-var version = pkg.version;
+const version = pkg.version;
 
 program
     .version(version)
