@@ -15,6 +15,7 @@ $ koa2g --help
 
 ```
 $ git clone --recursive https://github.com/greedlab/koa2-generator.git
+$ cd koa2-generator
 $ npm install
 $ gulp build
 $ ./dist/bin/koa2g --help
