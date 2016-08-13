@@ -1,1 +1,0 @@
-{"version":3,"sources":["koa2g-update"],"names":[],"mappings":";;AAEA,QAAQ,gBAAR;AACA,QAAQ,yBAAR","file":"koa2g-update","sourcesContent":["\n\nrequire('babel-polyfill');\nrequire('../libs/koa2g-update.js');\n"],"sourceRoot":"/source/"}
