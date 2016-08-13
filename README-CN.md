@@ -1,35 +1,21 @@
 # node-front-template
 
-基于 node.js 的前端模板,用到了 es6,async,scss,babel,eslint,gulp,jsx,react,koa2,art-template
+生成前后端的 koa2 模板
 
 [English](README.md) | 中文
 
-## clone
+## 通过 npm 安装
 
 ```
-$ git clone https://github.com/greedlab/node-front-template.git
+$ npm install -g koa2-generator
+$ koa2g --help
 ```
 
-## 安装依赖
+## 通过源码安装
 
 ```
+$ git clone --recursive https://github.com/greedlab/koa2-generator.git
 $ npm install
-$ npm install -g gulp
-$ npm install -g pm2
-$ npm install -g nodemon
-```
-
-## 开发环境
-
-```
 $ gulp build
-$ gulp watch
-$ npm run develop
-```
-
-## 生产环境
-
-```
-$ gulp release
-$ npm run release
+$ ./dist/bin/koa2g --help
 ```

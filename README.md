@@ -1,28 +1,21 @@
 # node-front-template
 
-template for front end based on node.js
+generate koa2 front or back end template
 
 English | [中文](README-CN.md)
 
-## clone
+## install from npm
 
 ```
-$ git clone https://github.com/greedlab/node-front-template.git
+$ npm install -g koa2-generator
+$ koa2g --help
 ```
 
-## develop env
+## install from source code
 
 ```
+$ git clone --recursive https://github.com/greedlab/koa2-generator.git
 $ npm install
 $ gulp build
-$ gulp watch
-$ npm run develop
-```
-
-## production env
-
-```
-$ npm install
-$ gulp release
-$ npm run release
+$ ./dist/bin/koa2g --help
 ```

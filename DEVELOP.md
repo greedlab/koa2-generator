@@ -48,3 +48,11 @@ npm install --save-dev run-sequence
 * `Preferences > Languages & Frameworks > Node.js and NPm > Node interperter:v5.11.1 | enable Node.js Core library`
 * `Preferences > Languages & Frameworks > JavaScript > JavaScript language version > ECMAScript`
 * `Preferences > Languages & Frameworks > JavaScript > Code Quality Tools > ESLint > Enable`
+
+## update submodule
+
+```
+$ git submodule update --remote
+```
+
+## publish
