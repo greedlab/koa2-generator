@@ -95,7 +95,19 @@ export async function installMongoDB() {
     await runNpm(['install', '--save', 'mongoose']);
 }
 
-export async function installAllDependencies() {
+export async function installFrontDependencies() {
+    await installKoa2();
+    await installBabel();
+    await supportAsync();
+    await installEslint();
+    await installGulp();
+    await installPm2();
+    await installNodemon();
+    await installArtTemplate();
+    await installMongoDB();
+}
+
+export async function installBackDependencies() {
     await installKoa2();
     await installBabel();
     await supportAsync();

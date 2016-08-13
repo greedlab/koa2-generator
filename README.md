@@ -1,6 +1,6 @@
 # koa2-generator (developing...)
 
-full-stack generator for koa2
+front and back end generator for koa2
 
 English | [中文](README-CN.md)
 

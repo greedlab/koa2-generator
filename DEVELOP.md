@@ -60,6 +60,13 @@ npm install --save-dev babel-plugin-transform-async-to-module-method
 
 ```
 npm install --save-dev gulp gulp-babel gulp-changed gulp-sourcemaps gulp-rename gulp-plumber run-sequence
+```
+
+## other
+
+```
+npm install --save bluebird
+```
 
 ## WebStorm
 

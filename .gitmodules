@@ -1,0 +1,3 @@
+[submodule "node-back-template"]
+	path = node-back-template
+	url = git@github.com:greedlab/node-back-template.git

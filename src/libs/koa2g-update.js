@@ -12,12 +12,14 @@ import * as command from '../utils/command.js';
 program
     .version(version)
     .usage('[options]')
-    .option('-d, --directory', 'the target directory (defaults to ./)')
+    .option('-d, --directory [directory]', 'the target directory. (defaults to ./)')
+    .option('-e, --end [end]', 'front(front end) or back(back end). (defaults to front)')
+    .description('update dependencies for the project')
     .parse(process.argv);
 
 main();
 
-async function updateApplication(directory) {
+async function updateApplication(directory,end) {
     let package_file = path.join(directory, 'package.json');
     console.log('package: ' + package_file);
     let exists = await path_util.existedFile(package_file);
@@ -25,7 +27,11 @@ async function updateApplication(directory) {
         process.chdir(directory);
         var cwd = process.cwd();
         console.log('cwd: ' + cwd);
-        await command.installAllDependencies();
+        if (end === 'back') {
+            await command.installBackDependencies();
+        } else {
+            await command.installFrontDependencies();
+        }
     } else {
         console.error('aborting! because ' + package_file + ' is not existed');
     }
