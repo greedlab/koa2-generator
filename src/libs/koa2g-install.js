@@ -1,11 +1,15 @@
 import program from 'commander';
 import path from 'path';
+import fs from 'fs';
 import Debug from 'debug';
+import bluebird from 'bluebird';
 
 import * as path_util from '../utils/path.js';
 import * as command from '../utils/command.js';
 import * as copy_util from '../utils/copy';
 import pkg from '../../package.json';
+
+bluebird.promisifyAll(fs);
 
 const version = pkg.version;
 const debug = Debug('koa2-generator:koa2g-install');
@@ -50,6 +54,27 @@ async function installApplication(directory, end) {
         await installBackApplication(directory);
     } else {
         await installFrontApplication(directory);
+    }
+    await updatePackage(directory, program.end);
+}
+
+async function updatePackage(directory, end) {
+    const package_file = path.join(directory, 'package.json');
+    debug('target package: ' + package_file);
+    const exists = await path_util.existedFile(package_file);
+    if (exists) {
+        let packageObj = JSON.parse(await fs.readFileAsync(package_file));
+        packageObj.main = 'dist/app.js';
+        if (end === 'back') {
+            packageObj.scripts.develop = 'PORT=4002 DEBUG=' + packageObj.name + '* nodemon -w dist -e js dist/app.js';
+            packageObj.scripts.release = 'PORT=4002 NODE_ENV=release pm2 start dist/app.js  -i 0 --name ' + packageObj.name + ' --watch';
+        } else {
+            packageObj.scripts.develop = 'PORT=4001 DEBUG=' + packageObj.name + '* nodemon -w dist -e js,html,css,jsx dist/app.js';
+            packageObj.scripts.release = 'PORT=4001 NODE_ENV=release pm2 start dist/app.js  -i 0 --name ' + packageObj.name + ' --watch';
+        }
+        await fs.writeFileAsync(package_file,JSON.stringify(packageObj,null,4));
+    } else {
+        console.error('aborting! because ' + package_file + ' is not existed');
     }
 }
 

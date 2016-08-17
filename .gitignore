@@ -42,6 +42,3 @@ jspm_packages
 # WebStorm
 .idea
 
-# build
-dist
-

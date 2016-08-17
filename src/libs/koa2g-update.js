@@ -1,4 +1,3 @@
-
 import program from 'commander';
 import path from 'path';
 import Debug from 'debug';
@@ -19,10 +18,10 @@ program
 
 main();
 
-async function updateApplication(directory,end) {
-    let package_file = path.join(directory, 'package.json');
+async function updateApplication(directory, end) {
+    const package_file = path.join(directory, 'package.json');
     debug('target package: ' + package_file);
-    let exists = await path_util.existedFile(package_file);
+    const exists = await path_util.existedFile(package_file);
     if (exists) {
         process.chdir(directory);
         var cwd = process.cwd();
@@ -41,7 +40,7 @@ async function main() {
     try {
         const directory = path.resolve(program.args.shift() || '.');
         debug('target directory: ' + directory);
-        await updateApplication(directory);
+        await updateApplication(directory, program.end);
     } catch (err) {
         console.error(err);
     }

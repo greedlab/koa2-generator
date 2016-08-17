@@ -86,10 +86,13 @@ export async function installFrontDependencies() {
     await runNpm(['install', '--save-dev', 'gulp-plumber']);
     await runNpm(['install', '--save-dev', 'gulp-livereload']);
     await runNpm(['install', '--save-dev', 'imagemin-pngquant']);
+    await runNpm(['install', '--save-dev', 'imagemin-gifsicle']);
     await runNpm(['install', '--save-dev', 'run-sequence']);
 
-    // art-template
+    // other
     await runNpm(['install', '--save', 'art-template']);
+    await runNpm(['install', '--save', 'request']);
+
     await installDebug();
     await installNodemon();
     await installPm2();
@@ -104,7 +107,7 @@ export async function installBackDependencies() {
     await runNpm(['install', '--save', 'koa-bodyparser@next']);
     await runNpm(['install', '--save', 'koa-logger@next']);
     await runNpm(['install', '--save', 'koa-router@next']);
-    await runNpm(['install', '--save', 'koa-convert@next']);
+    await runNpm(['install', '--save', 'koa-convert']);
 
     // babel
     await runNpm(['install', '--save', 'babel-polyfill']);
@@ -139,10 +142,8 @@ export async function installBackDependencies() {
     await runNpm(['install', '--save', 'passport-local']);
     await runNpm(['install', '--save', 'jsonwebtoken']);
 
-    // bcrypt
+    // other
     await runNpm(['install', '--save', 'bcrypt']);
-
-    // bluebird
     await runNpm(['install', '--save', 'bluebird']);
 
     await installDebug();
