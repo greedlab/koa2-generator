@@ -75,6 +75,9 @@ export async function installFrontDependencies() {
 
     // gulp
     await runNpm(['install', '--save-dev', 'gulp']);
+    await runNpm(['install', '--save-dev', 'gulp-rev']);
+    await runNpm(['install', '--save-dev', 'gulp-rev-collector']);
+    await runNpm(['install', '--save-dev', 'gulp-htmlmin']);
     await runNpm(['install', '--save-dev', 'gulp-babel']);
     await runNpm(['install', '--save-dev', 'gulp-changed']);
     await runNpm(['install', '--save-dev', 'gulp-sourcemaps']);
@@ -85,6 +88,7 @@ export async function installFrontDependencies() {
     await runNpm(['install', '--save-dev', 'gulp-imagemin']);
     await runNpm(['install', '--save-dev', 'gulp-plumber']);
     await runNpm(['install', '--save-dev', 'gulp-livereload']);
+    await runNpm(['install', '--save-dev', 'gulp-react']);
     await runNpm(['install', '--save-dev', 'imagemin-pngquant']);
     await runNpm(['install', '--save-dev', 'imagemin-gifsicle']);
     await runNpm(['install', '--save-dev', 'run-sequence']);

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "full-stack generator for koa2",
   "main": "index.js",
+  "preferGlobal": true,
   "bin": {
     "koa2g": "./dist/bin/koa2g"
   },
@@ -30,7 +31,6 @@
     "bluebird": "^3.4.1",
     "commander": "^2.9.0",
     "debug": "^2.2.0",
-    "koa": "^2.0.0-alpha.5",
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {

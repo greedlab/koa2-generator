@@ -268,37 +268,41 @@ var installFrontDependencies = exports.installFrontDependencies = function () {
 
                     case 50:
                         _context7.next = 52;
-                        return runNpm(['install', '--save-dev', 'imagemin-pngquant']);
+                        return runNpm(['install', '--save-dev', 'gulp-react']);
 
                     case 52:
                         _context7.next = 54;
-                        return runNpm(['install', '--save-dev', 'imagemin-gifsicle']);
+                        return runNpm(['install', '--save-dev', 'imagemin-pngquant']);
 
                     case 54:
                         _context7.next = 56;
-                        return runNpm(['install', '--save-dev', 'run-sequence']);
+                        return runNpm(['install', '--save-dev', 'imagemin-gifsicle']);
 
                     case 56:
                         _context7.next = 58;
-                        return runNpm(['install', '--save', 'art-template']);
+                        return runNpm(['install', '--save-dev', 'run-sequence']);
 
                     case 58:
                         _context7.next = 60;
-                        return runNpm(['install', '--save', 'request']);
+                        return runNpm(['install', '--save', 'art-template']);
 
                     case 60:
                         _context7.next = 62;
-                        return installDebug();
+                        return runNpm(['install', '--save', 'request']);
 
                     case 62:
                         _context7.next = 64;
-                        return installNodemon();
+                        return installDebug();
 
                     case 64:
                         _context7.next = 66;
-                        return installPm2();
+                        return installNodemon();
 
                     case 66:
+                        _context7.next = 68;
+                        return installPm2();
+
+                    case 68:
                     case 'end':
                         return _context7.stop();
                 }
