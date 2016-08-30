@@ -56,6 +56,7 @@ export async function installFrontDependencies() {
 
     // koa2
     await runNpm(['install', '--save', 'koa@next']);
+    await runNpm(['install', '--save', 'koa-router@next']);
     await runNpm(['install', '--save', 'koa-bodyparser@next']);
     await runNpm(['install', '--save', 'koa-favicon@next']);
     await runNpm(['install', '--save', 'koa-logger@next']);
